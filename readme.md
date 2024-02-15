@@ -1,5 +1,6 @@
 # Josie ML Image Classifier
 Josie ML was created as a project for the **M**ajor **L**eague **H**acking's (**MLH**) **AI/ML Global Hack Week Hackathon (February 9-15, 2024)**.
+  
 ![image](https://github.com/midnight-baker/Josie-ML-Image-Classifier/assets/124546107/6f23288b-21df-4f69-aefc-f20be9334b7e)
 
 ## What does Josie ML do?
