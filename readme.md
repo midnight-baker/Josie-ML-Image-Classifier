@@ -1,5 +1,5 @@
 # Josie ML Image Classifier
-Josie ML was created as a project for the **M**ajor **L**eague **H**acking (**MJL**) **AI/ML Hackathon February 2024**.  
+Josie ML was created as a project for the **M**ajor **L**eague **H**acking's (**MLH**) **AI/ML Global Hack Week Hackathon (February 10-15, 2024)**.
 
 ## What does Josie ML do?
 Josie ML gives the user an option to either submit an image or a drawing of a number or an object and uses ML to try to identify the input.  
