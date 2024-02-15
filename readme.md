@@ -7,10 +7,8 @@ Josie ML gives the user an option to either submit an image or a drawing of a nu
 
 ## Technology used to build it
 **Languages:** Python  
-**Primary Packages:**
-- scikit-learn  
-- matplotlib  
-**Framework:** Django
+**Primary Packages:** scikit-learn, matplotlib  
+**Framework:** Django  
 
 ## Lessons Learned
 1. How to use scikit-learn & matplotlib to train, test, and analyze the performance of a machine learning algorithm using preprepared data.  
