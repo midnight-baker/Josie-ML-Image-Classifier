@@ -6,7 +6,7 @@ Josie ML was created as a project for the **M**ajor **L**eague **H**acking's (**
 Josie ML gives the user an option to either submit an image or a drawing of a number or an object and uses ML to try to identify the input.  
 
 ## Technology used to build it
-**Languages:** Python 
+**Languages:** Python  
 **Primary Packages:**
 - scikit-learn
 - matplotlib
