@@ -87,7 +87,7 @@
     <Content Include="app\templates\app\layout.html" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="readme.html">
+    <None Include="readme.md">
       <SubType>WebBrowser</SubType>
     </None>
   </ItemGroup>
