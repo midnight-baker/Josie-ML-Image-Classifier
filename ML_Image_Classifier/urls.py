@@ -4,27 +4,11 @@ Definition of urls for ML_Image_Classifier.
 
 from datetime import datetime
 from django.urls import path
-from django.contrib import admin
-from django.contrib.auth.views import LoginView, LogoutView
 from app import forms, views
 
-
 urlpatterns = [
-    path('', views.home, name='home'),
-    path('contact/', views.contact, name='contact'),
-    path('about/', views.about, name='about'),
-    path('login/',
-         LoginView.as_view
-         (
-             template_name='app/login.html',
-             authentication_form=forms.BootstrapAuthenticationForm,
-             extra_context=
-             {
-                 'title': 'Log in',
-                 'year' : datetime.now().year,
-             }
-         ),
-         name='login'),
-    path('logout/', LogoutView.as_view(next_page='/'), name='logout'),
-    path('admin/', admin.site.urls),
+    path('', views.try_josie, name='try_josie'),
+    path('about_creator/', views.about_creator, name='about_creator'),
+    path('about_josie/', views.about_josie, name='about_josie'),
+    path('upload_image/', views.upload_image, name='upload_image'),
 ]

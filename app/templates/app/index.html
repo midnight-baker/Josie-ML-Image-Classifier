@@ -4,27 +4,42 @@
 
 <div class="jumbotron">
     <h1>Try the Josie ML Image Classifier</h1>
+
     <h2>Josie ML Number Classifier</h2>
     <p class="lead">Josie lets you draw or upload an image of a number and identifies it.</p>
     <p><a href="/about" class="btn btn-primary btn-large">Learn more &raquo;</a></p>
+
     <h2>Josie ML Fruit Classifier</h2>
     <p class="lead">Josie lets you draw or upload an image of a number and identifies it.</p>
     <p><a href="/about" class="btn btn-primary btn-large">Learn more &raquo;</a></p>
 </div>
 
 <div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            Upload an image:
-        </p>
-        <p><a class="btn btn-default" href="https://djangobook.com/django-tutorials/">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>See more projects by midnight-baker</h2>
-        <p>Midnight-baker specializes in software development in Dart, Java, and Python and cybersecurity and dabbles in machine learning using Python.</p>
-        <p><a class="btn btn-default" href="https://github.com/midnight-baker?tab=repositories"> midnight-baker's GitHub</a></p>
-    </div>
+    <h2>Josie ML Number Classifier</h2>
+    <p class="lead">Josie lets you draw or upload an image of a number and identifies it.</p>
+    <p>Upload an image:</p>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Upload Image</button>
+    </form>
+</div>
+
+<div class="row">
+    <h2>Josie ML Fruit Classifier</h2>
+    <p class="lead">Josie lets you draw or upload an image of a number and identifies it.</p>
+    <p>Upload an image:</p>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Upload Image</button>
+    </form>
+</div>
+
+<div class="row">
+    <h2>See more projects by midnight-baker</h2>
+    <p>Midnight-baker specializes in software development in Dart, Java, and Python and cybersecurity and dabbles in machine learning using Python.</p>
+    <p><a class="btn btn-default" href="https://github.com/midnight-baker?tab=repositories"> midnight-baker's GitHub</a></p>
 </div>
 
 {% endblock %}

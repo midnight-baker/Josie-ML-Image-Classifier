@@ -3,8 +3,10 @@ Definition of views.
 """
 
 from datetime import datetime
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpRequest
+from .forms import YourModelForm
+
 
 def try_josie(request):
     """Renders the home page."""
@@ -41,3 +43,13 @@ def about_josie(request):
             'year':datetime.now().year,
         }
     )
+
+def upload_image(request):
+    if request.method == 'POST':
+        form = YourModelForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            return redirect('success_url')
+    else:
+        form = YourModelForm()
+    return render(request, 'upload_form.html', {'form': form})
