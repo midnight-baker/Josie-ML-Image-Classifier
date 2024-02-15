@@ -8,8 +8,8 @@ Josie ML gives the user an option to either submit an image or a drawing of a nu
 ## Technology used to build it
 **Languages:** Python  
 **Primary Packages:**
-- scikit-learn
-- matplotlib
+- scikit-learn  
+- matplotlib  
 **Framework:** Django
 
 ## Lessons Learned
