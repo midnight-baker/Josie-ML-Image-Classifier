@@ -6,40 +6,38 @@ from datetime import datetime
 from django.shortcuts import render
 from django.http import HttpRequest
 
-def home(request):
+def try_josie(request):
     """Renders the home page."""
     assert isinstance(request, HttpRequest)
     return render(
         request,
         'app/index.html',
         {
-            'title':'Home Page',
+            'title':'Try Josie ML',
             'year':datetime.now().year,
         }
     )
 
-def contact(request):
+def about_creator(request):
     """Renders the contact page."""
     assert isinstance(request, HttpRequest)
     return render(
         request,
         'app/contact.html',
         {
-            'title':'Contact',
-            'message':'Your contact page.',
+            'title':'About Creator',
             'year':datetime.now().year,
         }
     )
 
-def about(request):
+def about_josie(request):
     """Renders the about page."""
     assert isinstance(request, HttpRequest)
     return render(
         request,
         'app/about.html',
         {
-            'title':'About',
-            'message':'Your application description page.',
+            'title':'About Josie ML',
             'year':datetime.now().year,
         }
     )
