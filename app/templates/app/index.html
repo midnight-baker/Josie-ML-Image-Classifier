@@ -18,10 +18,15 @@
     <h2>Josie ML Number Classifier</h2>
     <p class="lead">Josie lets you draw or upload an image of a number and identifies it.</p>
     <p>Upload an image:</p>
-    <form method="post" enctype="multipart/form-data">
+    <div style="display: inline-block;">
+        <button onclick="openFilePicker('file-input1', 'image-name1', 'select-image-btn1', 'upload-btn1')" id="select-image-btn1">Select Image</button>
+        <input type="file" id="file-input1" style="display: none;" name="image" onchange="displayImageName('file-input1', 'image-name1')">
+        <label id="image-name1" style="margin-left: 10px; font-style: italic;"></label>
+    </div>
+    <form method="post" enctype="multipart/form-data" style="display: inline-block;">
         {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit">Upload Image</button>
+        <!--{{form.as_p}}-->
+        <button type="submit" id="upload-btn1" class="disabled-button" disabled>Upload</button>
     </form>
 </div>
 
@@ -29,10 +34,15 @@
     <h2>Josie ML Fruit Classifier</h2>
     <p class="lead">Josie lets you draw or upload an image of a number and identifies it.</p>
     <p>Upload an image:</p>
-    <form method="post" enctype="multipart/form-data">
+    <div style="display: inline-block;">
+        <button onclick="openFilePicker('file-input2', 'image-name2', 'select-image-btn2', 'upload-btn2')" id="select-image-btn2">Select Image</button>
+        <input type="file" id="file-input2" style="display: none;" name="image" onchange="displayImageName('file-input2', 'image-name2')">
+        <label id="image-name2" style="margin-left: 10px; font-style: italic;"></label>
+    </div>
+    <form method="post" enctype="multipart/form-data" style="display: inline-block;">
         {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit">Upload Image</button>
+        <!--{{form.as_p}}-->
+        <button type="submit" id="upload-btn2" class="disabled-button" disabled>Upload</button>
     </form>
 </div>
 

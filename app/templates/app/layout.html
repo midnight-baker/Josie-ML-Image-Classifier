@@ -8,6 +8,17 @@
     <link rel="stylesheet" type="text/css" href="{% static 'app/content/bootstrap.min.css' %}" />
     <link rel="stylesheet" type="text/css" href="{% static 'app/content/site.css' %}" />
     <script src="{% static 'app/scripts/modernizr-2.6.2.js' %}"></script>
+    <script>
+        function openFilePicker() {
+            document.getElementById('file-input').click();
+        }
+
+        function displayImageName() {
+            var fileInput = document.getElementById('file-input');
+            var imageNameLabel = document.getElementById('image-name');
+            imageNameLabel.innerHTML = fileInput.files[0].name;
+        }
+    </script>
 </head>
 
 <body>
@@ -32,8 +43,8 @@
     </div>
 
     <div class="container body-content">
-{% block content %}{% endblock %}
-        <hr/>
+        {% block content %}{% endblock %}
+        <hr />
         <footer>
             <p>&copy; {{ year }} - Josie ML Image Classifier</p>
         </footer>
@@ -42,7 +53,30 @@
     <script src="{% static 'app/scripts/jquery-1.10.2.js' %}"></script>
     <script src="{% static 'app/scripts/bootstrap.js' %}"></script>
     <script src="{% static 'app/scripts/respond.js' %}"></script>
-{% block scripts %}{% endblock %}
+    <script>
+        function openFilePicker(fileInputId, imageNameId, selectImageBtnId, uploadBtnId) {
+            document.getElementById(fileInputId).click();
+        }
+
+        function displayImageName(fileInputId, imageNameId) {
+            var fileInput = document.getElementById(fileInputId);
+            var imageNameLabel = document.getElementById(imageNameId);
+            imageNameLabel.innerHTML = fileInput.files[0].name;
+        }
+
+        document.getElementById('file-input1').addEventListener('change', function () {
+            document.getElementById('select-image-btn1').classList.add('btn.disabled');
+            document.getElementById('upload-btn1').classList.remove('btn.disabled');
+            document.getElementById('upload-btn1').removeAttribute('disabled');
+        });
+
+        document.getElementById('file-input2').addEventListener('change', function () {
+            document.getElementById('select-image-btn2').classList.add('btn.disabled');
+            document.getElementById('upload-btn2').classList.remove('btn.disabled');
+            document.getElementById('upload-btn2').removeAttribute('disabled');
+        });
+    </script>
+    {% block scripts %}{% endblock %}
 
 </body>
 </html>

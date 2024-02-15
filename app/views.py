@@ -52,4 +52,4 @@ def upload_image(request):
             return redirect('success_url')
     else:
         form = YourModelForm()
-    return render(request, 'upload_form.html', {'form': form})
+    return render(request, 'upload_image.html', {'form': form})

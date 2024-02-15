@@ -57,6 +57,7 @@
     <Folder Include="ML_Image_Classifier\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="app\templates\app\upload_image.html" />
     <Content Include="requirements.txt" />
     <Content Include="db.sqlite3" />
     <Content Include="app\static\app\content\bootstrap.css" />
